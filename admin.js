@@ -1,18 +1,31 @@
-// const express = require("express")
-// const router = express.Router()
-Or
-const Router = require("express").Router
+// module.exports = {
+//     userMiddleware: function(req, res, next){
+//         if(req.params.username == "ali"){
+//             next()
+//         } else {
+//             return res.send("Invalid User")
+//         }
+//        }
+//     }
 
-router.get("/my-users/list",(req,res) => {
-    res.send("list Page")
-})
+    module.exports = {
+        useridMiddleware: function(req, res, next){
+            if(req.params.id == "27" && ){
+                next()
+            } else {
+                return res.send("Invalid ID")
+            }
+           }
+        }
+
+        //  module.exports = {
+        //     userloginMiddleware: function(req, res, next){
+        //         if(req.params.login == "Ahmed"){
+        //             next()
+        //         } else {
+        //             return res.send("Invalid User")
+        //         }
+        //        }
+        //     }
 
 
-
-router.get("/delete-user" , (req,res) =>{
-    res.send("my name is bilal")
-}) 
-
-
-
-module.exports = router
